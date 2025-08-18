@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Booking CDS View'
+define service ZND_UI_RAP_BOOK {
+  expose ZND_RAP_BOOK;
+}

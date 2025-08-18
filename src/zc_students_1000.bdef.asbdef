@@ -1,0 +1,11 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_STUDENTS_1000
+{
+  use create;
+  use update;
+  use delete;
+
+  use action setAdmitted;
+}

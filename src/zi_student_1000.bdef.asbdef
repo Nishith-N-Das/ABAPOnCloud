@@ -1,0 +1,30 @@
+managed implementation in class zbp_i_student_1000 unique;
+strict ( 2 );
+
+define behavior for ZI_STUDENT_1000
+persistent table znnd_rap_db
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Id;
+  action ( features : instance ) setAdmitted result[1] $self;
+
+  mapping for znnd_rap_db
+    {
+      Id                 = id;
+      Firstname          = Firstname;
+      Lastname           = lastname;
+      Age                = age;
+      Course             = course;
+      Courseduration     = courseduration;
+      Status             = status;
+      Gender             = gender;
+      Dob                = dob;
+//      Lastchangedat      = lastchangedat;
+//      Locallastchangedat = locallastchangedat;
+    }
+}
